@@ -1,9 +1,11 @@
-# Calculadora de Índice de Masa Corporal (IMC)
+
+# Calculadora de Indice de Masa Corporal (IMC)
 
 print("===== CALCULADORA DE IMC =====")
 
 # Solicitar datos al usuario
-nombre = input("Ingresa tu nombre: ")
+nombre = input("Ingresa tu nombre: ").title()
+apellido = input("Ingresa tu apellido: ").title()
 edad = int(input("Ingresa tu edad: "))
 peso = float(input("Ingresa tu peso en kg: "))
 estatura = float(input("Ingresa tu estatura en metros: "))
@@ -12,9 +14,14 @@ estatura = float(input("Ingresa tu estatura en metros: "))
 imc = peso / (estatura ** 2)
 
 # Mostrar resultados
-print("\n===== RESULTADOS =====")
-print("Nombre:", nombre)
-print("Edad:", edad, "años")
-print("Peso:", peso, "kg")
-print("Estatura:", estatura, "m")
-print("Tu IMC es:", round(imc, 2))
+print("\n" + "=" * 40)
+print("         RESULTADOS DEL IMC")
+print("=" * 40)
+
+print(f"Nombre:       {nombre} {apellido}")
+print(f"Edad:         {edad} años")
+print(f"Peso:         {peso:.2f} kg")
+print(f"Estatura:     {estatura:.2f} m")
+print("-" * 40)
+print(f"Tu IMC es:    {imc:.2f}")
+print("=" * 40)
